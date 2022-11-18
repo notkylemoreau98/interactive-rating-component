@@ -2,6 +2,9 @@
 
 ![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
 
+##DEMO URL
+https://prismatic-phoenix-bbd289.netlify.app/
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
