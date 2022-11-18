@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/809d6426a6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts.js" defer></script>
+
+    <title>Frontend Mentor | Interactive rating component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 54%, 68%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <main
+      class="bg-black text-white min-h-screen flex flex-col items-center justify-center tracking-wide"
+    >
+      <section
+        class="bg-[#1E2630] max-w-[365px] md:max-w-[430px] p-8 space-y-6 rounded-[32px] active"
+        id="welcome-modal"
+      >
+        <!-- Rating state start / Use an active class -->
+        <div class="star mb-8">
+          <i
+            class="fa-sharp fa-solid fa-star text-[#FC7612] p-4 cursor-pointer bg-[#262F38] rounded-full"
+          ></i>
+        </div>
+
+        <h1 class="text-3xl">How did we do?</h1>
+        <p class="text-gray-400">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+
+        <div class="space-x-4 flex justify-evenly">
+          <button
+            class="rating-btn text-gray-400 py-4 px-6 bg-[#262F38] rounded-full hover:bg-gray-500 hover:text-white"
+            value="1"
+          >
+            1
+          </button>
+          <button
+            class="rating-btn text-gray-400 py-4 px-6 bg-[#262F38] rounded-full hover:bg-gray-500 hover:text-white"
+            value="2"
+          >
+            2
+          </button>
+          <button
+            class="rating-btn text-gray-400 py-4 px-6 bg-[#262F38] rounded-full hover:bg-gray-500 hover:text-white"
+            value="3"
+          >
+            3
+          </button>
+          <button
+            class="rating-btn text-gray-400 py-4 px-6 bg-[#262F38] rounded-full hover:bg-gray-500 hover:text-white"
+            value="4"
+          >
+            4
+          </button>
+          <button
+            class="rating-btn text-gray-400 py-4 px-6 bg-[#262F38] rounded-full hover:bg-gray-500 hover:text-white"
+            value="5"
+          >
+            5
+          </button>
+        </div>
+
+        <button
+          class="bg-[#FC7612] w-full py-3 font-semibold uppercase tracking-widest text-sm rounded-[32px] submit hover:bg-white hover:text-[#FC7612]"
+        >
+          Submit
+        </button>
+      </section>
+
+      <section
+        class="bg-[#1E2630] max-w-[365px] md:max-w-[430px] text-center my-2 px-8 py-10 space-y-6 rounded-[32px]"
+        id="thanks-modal"
+      >
+        <!-- Thank you state start -->
+        <img
+          src="./images/illustration-thank-you.svg"
+          class="block mb-5 mx-auto"
+          alt=""
+        />
+        <div
+          class="text-[#FC7612] bg-[#262F38] w-[fit-content] block mx-auto py-1 px-5 rounded-[32px]"
+        >
+          You selected <span id="rating">3</span> out of 5
+        </div>
+
+        <div>
+          <h1 class="text-2xl mb-2">Thank you!</h1>
+          <p class="text-gray-400 text-sm mb-2 leading-6">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
+
+        <!-- Thank you state end -->
+      </section>
+
+      <footer>
+        <div class="attribution mt-10">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Kyle Moreau</a>.
+        </div>
+      </footer>
+    </main>
+
+    <style>
+      section {
+        display: none;
+      }
+
+      section.active {
+        display: block;
+      }
+
+      button.selected {
+        color: #fff;
+        background: #fc7612;
+      }
+    </style>
+  </body>
+</html>
